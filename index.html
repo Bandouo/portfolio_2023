@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b68fb17dce.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>My Portfolio</h1> 
+    </header>
+      <main role="main">
+        
+        <section id="first-view">
+          <img src="images/welcome.png" alt="メインビジュアル">
+          <h1></h1>
+          <p></p> <!-- キャッチフレーズを追加 -->
+          <!-- 背景画像はCSSで設定 -->
+      </section>
+
+
+        </section>
+        <section id="intro">
+          <h2>自己紹介 / about me</h2>
+          <img src="https://placehold.jp/150x150.png" alt="プロフィール写真" class="profile-pic">
+          <p>2003年11月生まれ、現在専門学校にてプログラミングなどの勉強中<br>
+            趣味：ゲーム、読書、写真、音楽鑑賞
+          </p>
+
+          <div class="btns">
+            <a class="btn_share" href="#"
+              ><i class="fab fa-twitter"></i>Twitter</a
+            >
+            <a class="btn_share" href="#"
+              ><i class="fab fa-facebook-f"></i>Facebook</a
+            >
+          </div>
+
+      </section>
+      <section id="skills">
+        <h2>スキル / skill</h2>
+        <ul class="skill-list">
+            <li>HMTL/CSS  勉強中</li>
+            <li>JavaScript  勉強中</li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+        <section id="about">
+          <h2>XXX</h2>
+          <p>説明文</p>
+          <div class="youtube">
+            <iframe
+              src="https://www.youtube.com/embed/IqKz0SfHaqI"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+        <img
+          class="logo-mark"
+          src="https://placehold.jp/3d4070/ffffff/150x150.png?text=%E3%83%AD%E3%82%B4%E3%83%9E%E3%83%BC%E3%82%AF"
+          alt="ロゴマーク"
+        />
+        <section id="product">
+          <h2>作品 / WORKS</h2>
+          <p>作成したサイト</p>
+          <div class="imgs">
+              <!-- 各作品のリンクとサムネイル -->
+              <a href="./page/katusikahokusai/katusikahokusai/211109_lp-simple_04/index.html" target="_blank">
+                  <img src="./images/hokusai.PNG" alt="日本の芸術を紹介するサイトを作りました" />
+              </a>
+              <a href="./page/jibunshi/jibunshi/scroll_timeline/index.html" target="_blank">
+                  <img src="./imgss/jubun.PNG" alt="自分史" />
+              </a>
+              <a href="./page/tonkotuGALAXY/tonkotuGALAXY/lp-green-tea/index.html" target="_blank">
+                  <img src="./imgss/tonkotu.PNG" alt="作品3の説明" />
+              </a>
+              <!-- その他の作品を追加 -->
+          </div>
+      </section>
+        <section id="contact">
+          <h2>Contact<span>お問い合わせ</span></h2>
+          <p class="form-desc">
+            ご意見・ご感想などいただけますと励みになります。<br />もしよろしければ、簡単なアンケートにもご協力ください。
+          </p>
+          <form action="#">
+            <div class="inner">
+              <table>
+                <tr>
+                  <th><label for="name">お名前</label></th>
+                  <td><input type="text" id="name" name="name" /></td>
+                </tr>
+                <tr>
+                  <th>性別</th>
+                  <td>
+                    <label
+                      ><input
+                        type="radio"
+                        name="gender"
+                        value="male"
+                      />男性</label
+                    >
+                    <label
+                      ><input
+                        type="radio"
+                        name="gender"
+                        value="female"
+                      />女性</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>年齢</th>
+                  <td>
+                    <select name="age">
+                      <option>10代</option>
+                      <option>20代</option>
+                      <option>30代</option>
+                      <option>40代</option>
+                      <option>50代</option>
+                      <option>60代以上</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="vote">投票</th>
+                  <td>
+                    <p>
+                      作品 (Works)
+                      の中で良かったと思うものに投票をお願いします。<br />※複数投票可
+                    </p>
+                    <label><input type="checkbox" name="work1" />作品1</label>
+                    <label><input type="checkbox" name="work2" />作品2</label>
+                    <label><input type="checkbox" name="work3" />作品3</label>
+                  </td>
+                </tr>
+                <tr>
+                  <th class="opinion">
+                    <label for="opinion">ご意見・ご感想</label>
+                  </th>
+                  <td><textarea id="opinion" name="opinion"></textarea></td>
+                </tr>
+              </table>
+              <div class="buttons">
+                <input type="reset" value="リセット" />
+                <input type="submit" value="送信" />
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer>
+        <small class="copyright"
+          >Copyright 2024 <a href="">My Portfolio</a></small
+        >
+      </footer>
+    </div>
+  </body>
+</html>
