@@ -1,0 +1,546 @@
+@charset "UTF-8";
+@import "https://unpkg.com/ress/dist/ress.min.css";
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #aaa;
+    text-align: center;
+    line-height: 1;
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-size: 1.6em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* 追加：ヘッダーのレイアウト調整 */
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 1px 2px;
+    margin: auto;
+}
+
+header {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background: white; 
+}
+
+body {
+    padding-top: 70px; 
+}
+
+header h1 {
+    flex-grow: 1; 
+    font-size: 2.5em;
+    color: #3d4070;
+    text-align: center;
+    margin: 0;
+    padding: 19px 0;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+header, footer {
+    background: white;
+    padding: 20px;
+}
+
+main {
+    color: white;
+    padding: 80px 0 100px;
+}
+
+section {
+    width: 900px;
+    margin: auto;
+}
+
+section + section {
+    margin-top: 80px;
+}
+
+section p {
+    width: 80%;
+    margin: auto;
+    line-height: 3;
+}
+
+h1 {
+    text-align: center;
+    letter-spacing: 0.5em;
+    font-size: 50px;
+    margin-bottom: 1em;
+}
+
+h2 {
+    letter-spacing: 0.5em;
+    margin-right: -0.5em;
+    font-size: 40px;
+    margin-bottom: 0.8em;
+}
+
+/* ハンバーガーメニューのスタイル調整 */
+/* ハンバーガーメニューのスタイル */
+.hamburger-menu {
+    position: absolute;
+    top: -20px; /* メニューの位置を上に調整 */
+    left: 5px; /* 左側に少し余白を追加 */
+    z-index: 1000; /* メニューが他の要素より上に表示されるように */
+}
+
+.menu__btn {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu__btn span,
+.menu__btn span::before,
+.menu__btn span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #333; /* メニューバーの色 */
+    transition: all 0.3s;
+}
+
+.menu__btn span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn span::after {
+    content: '';
+    top: 8px;
+}
+
+#menu__toggle {
+    display: none; /* チェックボックスを非表示に */
+}
+
+#menu__toggle:checked + .menu__btn span {
+    background-color: transparent; /* メニューが開いている時のアイコンの中央バーを非表示 */
+}
+
+#menu__toggle:checked + .menu__btn span::before {
+    transform: rotate(45deg); /* 上のバーを45度回転 */
+    top: 0;
+}
+
+#menu__toggle:checked + .menu__btn span::after {
+    transform: rotate(-45deg); /* 下のバーを-45度回転 */
+    top: 0;
+}
+
+.menu__box {
+    display: none; 
+    position: absolute;
+    top: 56px;
+    left: -100%;
+    width: 300px;
+    padding: 20px 0;
+    list-style: none;
+    background-color: #f0f0f0;
+    box-shadow: 2px 0px 10px rgba(0,0,0,.5);
+    transition: left 0.3s;
+}
+
+.menu__item {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu__item:hover {
+    background-color: #e4e4e4;
+}
+
+#menu__toggle:checked ~ .menu__box {
+    left: 0;
+}
+
+
+
+#first-view {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+#first-view img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#first-view h1, #first-view p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#intro {
+    background: #f0f0f0;
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#intro h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2em; /* タイトルのサイズ調整 */
+}
+
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* 要素間の隙間 */
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px; /* 写真のサイズ調整 */
+    height: 150px; /* 写真のサイズ調整 */
+    object-fit: cover; /* 画像のフィット調整 */
+}
+
+.intro-text {
+    max-width: 600px; /* テキストの最大幅 */
+}
+
+.intro-text p {
+    font-size: 1.2em; /* パラグラフのフォントサイズ */
+    line-height: 1.5; /* 行間 */
+    text-align: left; /* テキストの左揃え */
+}
+
+
+#skills {
+    background: #f7f7f7;
+    color: #333;
+    padding: 40px 20px;
+}
+
+#skills h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    list-style-type: none; /* リストの点を無くす */
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+.skill-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.4em; /* スキルの文字サイズを調整 */
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    margin: 60px auto 0;
+}
+
+.btn_share {
+    display: block;
+    background: white;
+    border: 4px solid #212121;
+    color: #212121;
+    width: 48%;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn_share .fab {
+    font-size: 30px;
+    margin-right: 0.5em;
+}
+
+.youtube {
+    aspect-ratio: 16/9;
+    margin-top: 80px;
+}
+
+.youtube iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-mark {
+    margin: 140px 0;
+    border-radius: 50%;
+}
+
+.imgs a {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.imgs a:hover {
+    transform: scale(1.05);
+}
+
+.imgs img {
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-bottom: 15px;
+}
+
+
+.imgs {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 15px;
+}
+
+/* レスポンシブ対応（小さい画面での表示を調整） */
+@media screen and (max-width: 600px) {
+    .imgs img {
+        width: 100%;
+        height: auto; 
+    }
+}
+
+#hobbies {
+    background: #f7f7f7;
+    color: #333;
+    padding: 40px 20px;
+}
+
+#hobbies h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hobbies-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.hobby {
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+}
+
+.hobby img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.hobby p {
+    color: #333;
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+#contact {
+    background: #ffffff;
+    color: #333;
+    padding: 40px 20px;
+}
+
+#contact h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+#contact table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#contact th {
+    text-align: left;
+    padding: 8px;
+    background: #f2f2f2;
+}
+
+#contact td {
+    padding: 8px;
+}
+
+input[type="text"], 
+input[type="reset"],
+input[type="submit"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #45a049;
+}
+
+input[type="reset"] {
+    background: #f44336;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="reset"]:hover {
+    background: #d32f2f;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons input {
+    width: auto;
+    margin: 5px;
+}
+
+/*.copyright*/ 
+.copyright {
+  display: block;
+  text-align: center;
+  line-height: 3;
+  margin: 0;
+  font-size: 12px;
+}
+ 
+.copyright a{ color: #373737;
+}
+.copyright a:hover {
+text-decoration: underline;
+}
+/* ハンバーガーメニューのスタイル */
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .menu__btn {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .menu__btn span,
+  .menu__btn span::before,
+  .menu__btn span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+  }
+  
+  .menu__btn span::before {
+    content: '';
+    top: -8px;
+  }
+  
+  .menu__btn span::after {
+    content: '';
+    top: 8px;
+  }
+  
+  #menu__toggle {
+    opacity: 0;
+  }
+  
+  .menu__box {
+    display: block;
+    position: absolute;
+    top: 56px;
+    left: -100%;
+    width: 300px;
+    padding: 20px 0;
+    list-style: none;
+    background-color: #f0f0f0;
+    box-shadow: 2px 0px 10px rgba(0,0,0,.5);
+    transition: left 0.3s;
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .menu__item:hover {
+    background-color: #e4e4e4;
+  }
+  
+  #menu__toggle:checked ~ .menu__box {
+    left: 0;
+  }
+  
+  .work-title {
+    display: block; /* ブロックレベルの要素として表示 */
+    color: #333; /* 文字色 */
+    font-size: 1.2em; /* 文字サイズ */
+    margin-top: 8px; /* 画像との間隔 */
+    text-align: center; /* 中央揃え */
+}
