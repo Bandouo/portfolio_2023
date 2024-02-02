@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio</title>
+  <!-- CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Zen+Maru+Gothic:wght@400;500;700&display=swap"
+  />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script
+    src="https://kit.fontawesome.com/b68fb17dce.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <!-- ハンバーガーメニューアイコン -->
+      <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+          <!-- メニュー項目 -->
+          <ul class="menu__box">
+            <li><a class="menu__item" href="#first-view">ホーム</a></li>
+            <li><a class="menu__item" href="#intro">自己紹介</a></li>
+            <li><a class="menu__item" href="#skills">スキル</a></li>
+            <li><a class="menu__item" href="#hobbies">趣味</a></li>
+            <li><a class="menu__item" href="#product">作品</a></li>
+            <li><a class="menu__item" href="#contact">お問い合わせ</a></li>
+          </ul>
+      </div>
+      <h1><a href="#" style="color: #3d4070; text-decoration: none;">Creative Journey</a></h1>
+
+    </header>
+    <main role="main">
+        
+        <section id="first-view">
+          <img src="./assets/images/welcome.png" alt="メインビジュアル">
+          <h1></h1>
+
+      </section>
+
+
+        </section>
+        <section id="intro">
+          <h2>自己紹介 / ABOUT ME</h2>
+          <div class="intro-content">
+          <img src="./assets/images/resized_icon.png" alt="プロフィール写真" class="profile-pic">
+          <p>板東 祐太朗<br>
+            2003年11月 生まれ 東京出身、現在専門学校にてプログラミングなどIT全般の勉強中<br>
+            趣味：ゲーム、読書、写真、音楽鑑賞
+          </p>
+        </div>
+          <div class="btns">
+            <a class="btn_share" href="#" target="_blank"
+              ><i class="fab fa-twitter"></i>Twitter</a
+            >
+            <a class="btn_share" href="https://open.spotify.com/playlist/1FowRROg8AmarqM61gyk9Y?si=1f752d3c0cac4499"  target="_blank"
+              ><i class="fab fa-spotify"></i>Playlist</a
+            >
+          </div>
+
+      </section>
+      <section id="skills">
+        <h2>スキル / SKILL</h2>
+        <ul class="skill-list">
+            <li>HMTL/CSS  勉強中</li>
+            <li>JavaScript  勉強中</li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <section id="hobbies">
+      <h2>趣味 / HOBBIES</h2>
+      <div class="hobbies-content">
+          <div class="hobby">
+              <img src="./assets/images/torii.jpg" alt="Hobby 1 Description">
+              <p>鹿島神宮の御手洗池</p>
+          </div>
+          <div class="hobby">
+              <img src="./assets/images/hinode.jpg" alt="Hobby 2 Description">
+              <p>2024初日の出</p>
+          </div>
+      </div>
+  </section>
+        <section id="product">
+          <h2>作品 / WORKS</h2>
+          <p>作成したページ</p>
+          <div class="imgs">             
+              <a href="./assets/page/katusikahokusai/index.html" target="_blank">
+                  <img src="./assets/images/nihongeijutuu.png" alt="日本の芸術を紹介するサイトを作りました" />
+                  <span class="work-title">日本の芸術紹介</span>
+              </a>
+              <a href="./assets/page/tonkotuGALAXY/index.html" target="_blank">
+                <img src="./assets/images/tonkotuuu.png" alt="作品3の説明" />
+                <span class="work-title">豚骨ラーメン紹介</span>
+            </a>
+              <a href="./assets/page/jibunshi/index.html" target="_blank">
+                  <img src="./assets/images/myhistory.png" alt="自分史" />
+                  <span class="work-title">自分史</span>
+              </a>            
+            <a href="./assets/page/lifeguard/index.html" target="_blank">
+              <img src="./assets/images/energy.png" alt="作品3の説明" />
+              <span class="work-title">エナジードリンク宣伝サイト</span>
+          </a>
+          <a href="./assets/page/bg-youtube/index.html" target="_blank">
+            <img src="./assets/images/girll.png" alt="作品3の説明" />
+            <span class="work-title">BABYMONSTER</span>
+          </a>
+          <a href="./assets/page/my-portfolio-main/v1/index.html" target="_blank">
+            <img src="./assets/images/myport.png" alt="作品3の説明" />
+            <span class="work-title">My Portfolio</span>
+        </a>
+          </div>
+      </section>
+
+        <section id="contact">
+          <h2>CONTACT/<span>お問い合わせ</span></h2>
+          <p class="form-desc">
+            ご意見・ご感想などいただけますと励みになります。<br />もしよろしければ、簡単なアンケートにもご協力ください。
+          </p>
+          <form action="#">
+            <div class="inner">
+              <table>
+                <tr>
+                  <th><label for="name">お名前</label></th>
+                  <td><input type="text" id="name" name="name" /></td>
+                </tr>
+                <tr>
+                  <th>性別</th>
+                  <td>
+                    <label
+                      ><input
+                        type="radio"
+                        name="gender"
+                        value="male"
+                      />男性</label
+                    >
+                    <label
+                      ><input
+                        type="radio"
+                        name="gender"
+                        value="female"
+                      />女性</label
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <th>年齢</th>
+                  <td>
+                    <select name="age">
+                      <option>10代</option>
+                      <option>20代</option>
+                      <option>30代</option>
+                      <option>40代</option>
+                      <option>50代</option>
+                      <option>60代以上</option>
+                    </select>
+                  </td>
+                </tr>
+
+                  <th class="opinion">
+                    <label for="opinion">ご感想</label>
+                  </th>
+                  <td><textarea id="opinion" name="opinion"></textarea></td>
+                </tr>
+              </table>
+              <div class="buttons">
+                <input type="reset" value="リセット" />
+                <input type="submit" value="送信" />
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+      <!-- footer -->
+      <footer>
+        <small class="copyright"
+          >Copyright 2024 <a href="">My Portfolio</a></small
+        >
+      </footer>
+    </div>
+    
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.getElementById('menu__toggle');
+    var menu = document.querySelector('.menu__box');
+
+    // メニューが非表示
+    menu.style.display = 'none';
+
+    toggle.addEventListener('change', function () {
+        if (this.checked) {
+            menu.style.display = 'block'; // メニューを表示
+        } else {
+            menu.style.display = 'none'; // メニューを非表示
+        }
+    });
+});
+
+    </script>
+
+</body>
+</html>

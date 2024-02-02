@@ -1,0 +1,130 @@
+@import "https://unpkg.com/ress/dist/ress.min.css";
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+}
+body {
+  line-height: 1.6; /* 行間を増やす */
+  color: #333; /* 色を暗めにする */
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.8em; /* フォントサイズを大きくする */
+  background-color: #fafafa; /* 背景色を明るくする */
+}
+header {
+  background: #555; /* ヘッダーの背景色を暗めにする */
+  padding: 1.5rem 0;
+  color: #fff; /* ヘッダーのテキストを白にする */
+}
+header h1 {
+  text-align: center;
+}
+header .logo {
+  width: 12rem; /* ロゴのサイズを大きくする */
+}
+/* --- section --- */
+section {
+  padding: 8rem 2rem; /* パディングを調整 */
+  text-align: center;
+}
+#first-view h2 {
+    color: #d3d3d3 !important;
+    text-shadow: 2px 2px 4px black !important;
+  }
+
+  section h2, section p {
+    text-shadow: none; /* テキストの影を取り除く */
+  }
+  section h2 {
+    font-size: 2.5em; /* 見出しのサイズを大きくする */
+    color: #444; /* 見出しの色を暗めにする */
+    margin-bottom: 0.5em; /* 余白を調整 */
+  }
+  section p {
+    line-height: 1.8; /* 行間を増やす */
+    color: #666; /* テキストの色を暗めにする */
+  }
+/* --- button --- */
+.btn_detail {
+  color: #fff;
+  text-align: center;
+  display: block;
+  width: 14em;
+  margin: 6rem auto 0;
+  padding: 1em 0;
+  border: 0.1rem solid white;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  transition: 0.3s all;
+}
+.btn_detail:hover {
+  background: white;
+}
+/* --- #first-view --- */
+#first-view {
+  height: 80vh;
+  background: url(../img/tonkotufdantasy.png) center/cover no-repeat;
+  position: relative;
+}
+#first-view h2 {
+  position: absolute;
+  top: 4em;
+  left: 10%;
+  font-family: "Shippori Mincho", serif;
+  color: #212121;
+  font-size: 4rem;
+  text-shadow: none;
+}
+/* --- #about --- */
+#about {
+  background-image: url(../img/np_soup2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #444;
+}
+#about .btn_detail {
+  margin-top: 10rem;
+}
+/* --- #products --- */
+#products {
+  width: 50%;
+  position: relative;
+  background: url(../img/tonkotu-removebg-preview.png) center/40% no-repeat #d3d3d3;
+}
+#products:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: url(../img/umaso.jpg) center/cover no-repeat;
+}
+/* --- #shop-event --- */
+#shop-event {
+  background: url(../img/fuji-mountain-with-milky-way-at-night.jpg) center/cover no-repeat;
+}
+#shop-event .btn_detail {
+  margin-top: 30rem;
+}
+/* --- footer --- */
+footer {
+  background: #555; /* フッターの背景色を暗めに */
+  color: #fff; /* フッターのテキストを白に */
+  padding: 2.5rem 0; /* パディングを増やす */
+}
+
+/* レスポンシブデザインのためのメディアクエリ */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%; /* モバイル端末でのフォントサイズを小さくする */
+  }
+  header .logo {
+    width: 8rem; /* モバイル端末でのロゴサイズを調整 */
+  }
+  section {
+    padding: 5rem 1rem; /* モバイル端末でのセクションのパディングを調整 */
+  }
+}
